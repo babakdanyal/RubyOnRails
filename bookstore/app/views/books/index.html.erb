@@ -1,0 +1,16 @@
+<h1>Books <%= pluralize(@books.length, 'Books')%></h1>
+	<tbody>
+	<% @books.each do |book| %>
+	      <table>
+<tr>
+  <th>Title</th>
+   <th>Author</th>
+</tr>
+		<tr>
+   <td><%= book.title%></td>
+    <td><%= book.author%></td>
+</tr>
+                 </table>
+            <% end %>
+</tbody>
+<%= link_to "New Book", "/books/new" %>
